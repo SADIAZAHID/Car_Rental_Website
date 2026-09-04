@@ -1,0 +1,125 @@
+.hero {
+    padding: 64px 0 40px;
+    overflow: hidden;
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero__copy h1 {
+    font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+    margin-top: 16px;
+}
+
+.hero__copy>.eyebrow {
+    color: var(--teal);
+}
+
+.hero__copy p {
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 480px;
+}
+
+.hero__ctas {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero__stats {
+    display: flex;
+    gap: 36px;
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.hero__stats dt {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--asphalt);
+}
+
+.hero__stats dd {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+}
+
+.hero__visual {
+    position: relative;
+}
+
+.hero__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.hero__gauge {
+    position: absolute;
+    top: -24px;
+    right: -12px;
+    width: 150px;
+    background: var(--paper);
+    border-radius: var(--radius-md);
+    box-shadow: 0 12px 32px rgba(20, 23, 28, 0.16);
+    padding: 14px 14px 8px;
+    z-index: 2;
+}
+
+.hero__gauge svg {
+    width: 100%;
+}
+
+.hero__gauge-label {
+    text-align: center;
+    margin-top: -18px;
+}
+
+.hero__gauge-label strong {
+    display: block;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.hero__gauge-label span {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__visual {
+        order: -1;
+    }
+
+    .hero__stats {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__gauge {
+        width: 118px;
+        padding: 10px 10px 6px;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+}

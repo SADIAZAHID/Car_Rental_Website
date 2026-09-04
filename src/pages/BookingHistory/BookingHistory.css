@@ -1,0 +1,111 @@
+.history-page__empty {
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius-md);
+}
+
+.history-page__empty h3 {
+    font-size: 1.1rem;
+    text-transform: none;
+}
+
+.history-page__empty p {
+    margin: 8px 0 22px;
+    color: var(--ink-soft);
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.history-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.history-card__main h3 {
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.history-card__main p {
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+}
+
+.history-card__contact {
+    font-family: var(--font-mono);
+    font-size: 0.78rem !important;
+}
+
+.history-card__side {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.history-card__side strong {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+}
+
+.history-status {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    border-radius: 999px;
+}
+
+.history-status--pending {
+    background: var(--gold-soft);
+    color: var(--gold-dark);
+}
+
+.history-status--confirmed {
+    background: var(--teal-soft);
+    color: var(--teal);
+}
+
+.history-status--cancelled {
+    background: var(--red-soft);
+    color: var(--red);
+}
+
+.history-card__remove {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+}
+
+.history-card__remove:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+@media (max-width: 700px) {
+    .history-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .history-card__side {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

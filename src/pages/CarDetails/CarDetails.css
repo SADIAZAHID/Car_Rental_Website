@@ -1,0 +1,125 @@
+.car-details__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.car-details__image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.car-details__image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.car-details__image .car-card__badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.car-details__info h1 {
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    margin-top: 8px;
+}
+
+.car-details__desc {
+    color: var(--ink-soft);
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.car-details__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+}
+
+.car-details__specs div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.car-details__specs span {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+}
+
+.car-details__specs strong {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.car-details__price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.car-details__price-row span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+}
+
+.car-details__price-row strong {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+}
+
+.car-details__back {
+    display: inline-block;
+    margin-top: 26px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.car-details__back:hover {
+    color: var(--ink);
+}
+
+.car-details__missing {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.car-details__missing p {
+    margin: 14px 0 24px;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+    .car-details__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-details__specs {
+        grid-template-columns: 1fr;
+    }
+
+    .car-details__price-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

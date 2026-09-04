@@ -1,0 +1,309 @@
+/* ==========================================================================
+   DRIVENOW — Design Tokens
+   Theme: "Asphalt & Headlight" — night driving, dashboards, lane markings.
+   Dark asphalt neutrals + a warm headlight-gold accent, a teal "go" signal
+   and red "stop" signal borrowed from road signage.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Color */
+  --asphalt: #14171c;
+  --asphalt-soft: #1e242c;
+  --asphalt-line: #2b333d;
+  --concrete: #eef0f2;
+  --concrete-soft: #f7f8f9;
+  --paper: #ffffff;
+  --ink: #14171c;
+  --ink-soft: #4a5568;
+  --steel: #6b7684;
+  --line: #dde1e5;
+  --gold: #f2a93b;
+  --gold-dark: #d98f1f;
+  --gold-soft: #fdf1dd;
+  --teal: #1fa98a;
+  --teal-soft: #e4f6f2;
+  --red: #e2483d;
+  --red-soft: #fdeae8;
+
+  /* Type */
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --container: 1240px;
+  --nav-height: 76px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--concrete-soft);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.12;
+  color: var(--asphalt);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell main {
+  flex: 1;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section-head {
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
+.section-head h2 {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-top: 10px;
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  margin-top: 14px;
+  font-size: 1.02rem;
+}
+
+/* Buttons ---------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.92rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: transform 0.15s var(--ease), background 0.15s var(--ease), border-color 0.15s var(--ease), color 0.15s var(--ease);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--asphalt);
+}
+
+.btn-primary:hover {
+  background: var(--gold-dark);
+}
+
+.btn-outline {
+  border-color: var(--asphalt);
+  color: var(--asphalt);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--asphalt);
+  color: var(--paper);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--paper);
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  border-color: var(--paper);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Dark mode ---------------------------------------------------------------- */
+
+[data-theme='dark'] {
+  --concrete: #14171c;
+  --concrete-soft: #0f1114;
+  --paper: #1c2229;
+  --ink: #f1f2f4;
+  --ink-soft: #b7bfc8;
+  --line: #2b333d;
+  --asphalt-soft: #1c2229;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4 {
+  color: var(--ink);
+}
+
+[data-theme='dark'] .btn-outline {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+[data-theme='dark'] .btn-outline:hover {
+  background: var(--ink);
+  color: var(--asphalt);
+}
+
+/* Form elements shared ------------------------------------------------------ */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  transition: border-color 0.15s var(--ease);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.field .error-text {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea {
+  border-color: var(--red);
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}

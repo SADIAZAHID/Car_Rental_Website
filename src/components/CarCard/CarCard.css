@@ -1,0 +1,144 @@
+.car-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+
+.car-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(20, 23, 28, 0.1);
+}
+
+.car-card__image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.car-card__image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 10px 5px 8px;
+    border-radius: 999px;
+    background: rgba(20, 23, 28, 0.82);
+    color: var(--paper);
+}
+
+.car-card__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal);
+}
+
+.car-card__badge.is-booked .car-card__dot {
+    background: var(--red);
+}
+
+.car-card__body {
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.car-card__title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.car-card__title-row h3 {
+    font-size: 1.05rem;
+    text-transform: none;
+}
+
+.car-card__rating {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--gold-dark);
+    white-space: nowrap;
+}
+
+.car-card__category {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+}
+
+.car-card__specs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+}
+
+.car-card__specs li {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 3px 8px;
+}
+
+.car-card__footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.car-card__price {
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+}
+
+.car-card__price span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--asphalt);
+}
+
+.car-card__actions {
+    display: flex;
+    gap: 8px;
+}
+
+.car-card__actions .btn {
+    padding: 9px 14px;
+    font-size: 0.78rem;
+}
+
+.btn-disabled-link {
+    pointer-events: none;
+    opacity: 0.45;
+}
+
+.car-card.is-unavailable .car-card__image-wrap img {
+    filter: grayscale(0.35);
+}

@@ -1,0 +1,108 @@
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.admin-stat {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-stat span {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+}
+
+.admin-stat strong {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+}
+
+.admin-page__subhead {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+.admin-page__empty {
+    color: var(--ink-soft);
+    padding: 30px 0;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    min-width: 720px;
+}
+
+.admin-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.admin-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.88rem;
+    vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table td strong {
+    display: block;
+    font-weight: 600;
+}
+
+.admin-table td span {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+}
+
+.admin-table__status {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    background: var(--paper);
+}
+
+.admin-table__delete {
+    background: none;
+    border: none;
+    color: var(--red);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.admin-table__delete:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

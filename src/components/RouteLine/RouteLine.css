@@ -1,0 +1,30 @@
+.route-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.route-line__dashes {
+  flex: 1;
+  height: 3px;
+  background: repeating-linear-gradient(90deg,
+      var(--gold) 0px,
+      var(--gold) 22px,
+      transparent 22px,
+      transparent 38px);
+  border-radius: 2px;
+}
+
+.route-line__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
