@@ -52,7 +52,7 @@ export default function Signup() {
                     <form onSubmit={handleSubmit} noValidate>
                         <div className={`field ${errors.name ? 'has-error' : ''}`}>
                             <label htmlFor="name">Full name</label>
-                            <input id="name" type="text" placeholder="e.g. Sadia Zahid" value={form.name}
+                            <input id="name" type="text" placeholder="e.g. Abc " value={form.name}
                                 onChange={(e) => update('name', e.target.value)} />
                             {errors.name && <span className="error-text">{errors.name}</span>}
                         </div>
