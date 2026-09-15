@@ -19,6 +19,32 @@ src/             -> React Frontend
 backend/         -> FastAPI Backend
 \`\`\`
 
+🚗 **Introducing DriveNow — My Car Rental Website Project**
+
+I’m excited to share one of my recent web development projects: **DriveNow** 🚘
+
+🔗 Live Website: https://drivenow-flame.vercel.app/
+
+DriveNow is a modern **car rental website** designed to provide users with a simple and convenient experience for exploring and renting vehicles.
+
+Through this project, I focused on building a clean, responsive, and user-friendly interface while strengthening my skills in:
+
+💻 Frontend Web Development  
+🎨 Responsive UI Design  
+🚗 Car Rental / Booking Interface  
+⚡ Modern Web Technologies  
+🌐 Website Deployment with Vercel  
+
+This project was a great opportunity to turn an idea into a functional web application and further improve my frontend development and problem-solving skills.
+
+I’m continuously working on new projects to build my portfolio and grow as a **Software Engineer**. 🚀
+
+I’d love to hear your feedback on DriveNow!
+
+🔗 **Live Demo:** https://drivenow-flame.vercel.app/
+
+
+
 ## Setup & Run Instructions
 
 ### Frontend Configuration
